@@ -1,0 +1,162 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Nightly - Sidebars</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+		<!-- jQueryMobileCSS - styling-->
+		<link rel="stylesheet" href="css/jqeury.mobile.theme.min.css" />
+		
+		<!-- jQueryMobile icons -->
+		<link rel="stylesheet" href="css/jquery.mobile.icons.min.css" />
+
+		<!-- jQueryMobile core CSS -->
+        <link rel="stylesheet" href="css/jquery.mobile.min.css" />
+		
+		<!-- NIGHTLY style -->
+		<link rel="stylesheet" href="css/nightly.css" />
+		
+		<!-- Load Google Fonts -->
+		<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic,700italic' rel='stylesheet' type='text/css'>
+		
+		<!-- Load Font Awesome Icons -->
+		<link rel="stylesheet" href="css/font-awesome.min.css">
+
+		<!-- jQuery / jQueryMobile Scripts -->
+		<script src="js/jquery.min.js"></script>
+    <script src="js/jquery.mobile.min.js"></script>
+
+    </head>
+    <body>
+    
+        <div data-role="page" data-theme='a'>
+        
+            <div data-role="panel" data-display="push" id="sidebar" data-theme="a">
+                <ul data-role="listview">
+                    <li data-icon='false'><a data-ajax="false" href="index.html">Home</a></li>
+                    <li data-icon='false'><a data-ajax="false" href="about.html">About us</a></li>
+                    <li data-icon='false'><a href="blog.html">Blog</a></li>
+                    <li data-icon='false'><a data-ajax="false" href="index.html#aexamples">Examples</a></li>
+                    <li data-icon='false'><a data-ajax="false" href="index.html#ajquery">jQuery</a></li>
+                    <li data-icon='false'><a href="contact.php">Contact form</a></li>
+                    <li data-icon='false'><a href="getting-started.html">Getting started</a></li>
+                    <li data-icon='false'><a href="version.html">Changelog</a></li>
+                    <li data-icon='false'><a href="_.html">Plain Page</a></li>
+                </ul>
+            </div>
+        
+            <div data-role="panel" data-display="push" id="panel1" data-theme="a">
+                <h2>Left Sidebar</h2>
+                <p>This sidebar (panel) is located on the left side. To close, click on the button below, swipe to close or click off the panel.</p>
+                <a data-rel="close"><button data-role="none" class="nightly-button"><i class="fa fa-times-circle"></i>Close panel</button></a>
+            </div>
+            
+            <div data-role="panel" data-display="push" id="panel2" data-position="right">
+                <h2>Right Sidebar</h2>
+                <p>This sidebar (panel) is located on the left side. To close, click on the button below, swipe to close or click off the panel.</p>
+                <a data-rel="close"><button data-role="none" class="nightly-button"><i class="fa fa-times-circle"></i>Close panel</button></a>
+            </div>
+            
+            <div data-role="panel" data-display="reveal" id="panel3" data-position="left">
+                <ul data-role="listview" style="margin-top: -16px !important;">
+                    <li data-role="list-divider"><h2>Navigation</h2></li>
+                    <li data-icon='false'><a data-ajax="false" href="index.html">Home</a></li>
+                    <li data-icon='false'><a href="#">About</a></li>
+                    <li data-icon='false'><a href="#">Blog</a></li>
+                    <li data-icon='false'><a href="#">Contact</a></li>
+                </ul>
+                <p>Now you can put any HTML element in sidebars. It's super easy!</p>
+                <p><a data-rel="close"><button data-role="none" class="nightly-button"><i class="fa fa-times-circle"></i>Close panel</button></a></p>
+            </div>
+            
+            <div data-role="panel" data-display="overlay" id="panel4" data-position="right">
+                <ul data-role="listview" style="margin-top: -16px !important;">
+                    <li data-role="list-divider"><h2>Navigation</h2></li>
+                    <li data-icon='false'><a data-ajax="false" href="index.html">Home</a></li>
+                    <li data-icon='false'><a href="#">About</a></li>
+                    <li data-icon='false'><a href="#">Blog</a></li>
+                    <li data-icon='false'><a href="#">Contact</a></li>
+                </ul>
+                <p>Now you can put any HTML element in sidebars. It's super easy!</p>
+                <p><a data-rel="close"><button data-role="none" class="nightly-button"><i class="fa fa-times-circle"></i>Close panel</button></a></p>
+            </div>
+    
+            <div data-role="header" data-tap-toggle="false" data-theme='a'>
+                <a href='#sidebar' data-role="none"><img src="images/menu-icon.png" alt="sidebar" id="header-menu-icon" /></a>
+                <h1 class="header-title">Sidebars</h1>
+            </div>
+            
+            <div data-role="content">
+            
+                <h2>Sidebars</h2>
+            
+                <p>You can have as many sidebars on one page as you want. <strong>Left</strong> or <strong>right</strong></p>
+                <h3>CSS3 Transitions</h3>
+                <p>There are <strong>3 transitions</strong> types ready for you. Use one of these 3 attributes:</p>
+                <ul>
+                    <li><code>data-display="overlay"</code></li>
+                    <li><code>data-display="reveal"</code></li>
+                    <li><code>data-display="push"</code></li>
+                </ul>
+                <p>You can also specify location of sidebar:</p>
+                <ul>
+                    <li><code>data-position="left"</code></li>
+                    <li><code>data-position="right"</code></li>
+                </ul>
+                
+                <h3>Where do I put sidebar markup?</h3>
+                
+                <p>In between <code>&lt;div data-role="page"></code> and <code>&lt;div data-role="header"></code> like so:</p>
+                <pre>&lt;div data-role="page">
+
+    &lt;!-- SIDEBAR start -->
+    &lt;div data-role="panel" id="sidebar">
+        &lt;!-- panel content -->
+    &lt;/div>
+    &lt;!-- SIDEBAR end -->
+    
+    &lt;!-- header -->
+    &lt;!-- content -->
+    &lt;!-- footer -->
+
+&lt;/div> &lt;!-- page end--></pre>
+
+                <h3>How do I open sidebar?</h3>
+                <p>Use anchor tag with panel (sidebar) ID.</p>
+                <code>&lt;a href='#panel1'>Open sidebar&lt;/a></code>
+                
+                <h3>How do I close sidebar?</h3>
+                <p>Use anchor tag with target ID and data-rel attribute.</p>
+                <code>&lt;a href='#panel1' data-rel="close">Close sidebar&lt;/a></code>
+                
+                <h3>How do I close sidebar from inside?</h3>
+                <p>Use anchor tag with <strong>only</strong> data-rel attribute. Use only inside sidebar.</p>
+                <code>&lt;a data-rel="close">Close sidebar&lt;/a></code>
+                
+    
+                <h2>Sidebar Examples</h2>
+                
+                <p>Left, right sidebars with different transitions and different content.</p>
+            
+                <h3>Left sidebar</h3>  
+                <a href='#panel1'><button data-role="none" class="nightly-button"><i class="fa fa-navicon"></i>Open sidebar</button></a>
+                
+                <h3>Right sidebar</h3>
+                <a href='#panel2'><button data-role="none" class="nightly-button"><i class="fa fa-navicon"></i>Open sidebar</button></a> 
+                
+                <h3>Left sidebar with navigation</h3>
+                <a href='#panel3'><button data-role="none" class="nightly-button"><i class="fa fa-navicon"></i>Open sidebar</button></a>
+                
+                <h3>Right sidebar with navigation</h3>
+                <a href='#panel4'><button data-role="none" class="nightly-button"><i class="fa fa-navicon"></i>Open sidebar</button></a>
+            
+            </div>
+            
+            <div data-role="footer" data-theme="none" data-border="false">
+                <p data-inset="true">NIGHTLY 2014. All rights reserved.</p>
+            </div>
+            
+        </div>
+
+    </body>
+</html>
